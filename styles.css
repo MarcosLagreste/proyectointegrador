@@ -1,0 +1,16 @@
+body {
+    background-color: aqua;
+}
+
+.grid-container {
+    padding: 10px;
+}
+.top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+img {
+    height: 200px;
+}
