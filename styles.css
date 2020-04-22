@@ -6,26 +6,25 @@ body {
 
 .grid-container {
     padding: 10px;
-    
 }
 .top {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-
 }
 .carousel{
     width: 98%;
-    height: 500px;
-    margin: 20px auto;
+    height: 400px;
+    margin: 50px auto;
     border: 20px solid black;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 5px gold;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 5px greenyellow;
     overflow: hidden;
 }
-.albums1{
+.albums1 img{
     width: 20%;
-    height: 500px;
-    float: center;
+    max-height: 400px;
+    height: 720px;
+    float: left;
 }
 .car1{
     position: relative;
