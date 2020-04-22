@@ -15,26 +15,26 @@ body {
 }
 .carousel{
     width: 98%;
-    height: 600px;
+    height: 500px;
     margin: 20px auto;
     border: 20px solid black;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 5px grey;
+    box-shadow: 0px 0px 10px 5px gold;
     overflow: hidden;
 }
 .albums1{
     width: 20%;
     height: 500px;
-    float: left;
+    float: center;
 }
 .car1{
     position: relative;
     width: 500%;
     margin: 0px;
     left: 0px;
-    animation: webzone 20s infinite linear;
+    animation: carousellinear 20s infinite linear;
 }
-@keyframes webzone{
+@keyframes carousellinear{
     0%{left: 0%;}
     15%{left: 0%;}
     20%{left: -100%;}
