@@ -13,7 +13,56 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
 }
+.carousel, ul{
+    height: 300px;
+}
+.carousel{
+    position: absolute;
+    width: 600px;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 100px;
+    box-shadow: 10px 10px 15px grey;
+}
+.carousel li{
+    display: inline-block;
+    height: 300px;
+    float: left;
+    position: relative;
+    width: 600px;
+}
+.carousel ul{
+    position: absolute;
+    left: 0;
+    top: -15px;
+    width: 9000px;
+    list-style: none;
+    margin-left: -50px;
+    transition: right .2s linear;
+}
+.albums1{
+    margin: 0 auto;
+    padding: 0;
+    width: 600px;
+}
+.albums1 img{
+width: 100%;
+padding: 0 10px;
+}
+.carousel ul{
+    animation: slide-animation 15s infinite;
+}
+.carousel ul:hover{
+    animation-play-state: paused;
+}
+@keyframes slide-animation{
+    10%{right: 0;}
+    25%{right:-600px;}
+    50%{right: -1200px;}
+    75%{right: -1800px;}
+    100%{right: -1800px;}
 
+}
 .titulos {
     color: azure;
     padding: 10px;
