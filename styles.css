@@ -25,7 +25,7 @@ body {
 .albums1{
     width: 20%;
     height: 500px;
-    float: center;
+    
 }
 .car1{
     position: relative;
@@ -51,17 +51,21 @@ body {
     padding: 10px;
     gap: 20px;
     align-self: center;
+    justify-self: center;
+    font-size: x-large;
 }
 
-.logo1 {
-    height: 100px;
+a { 
+    color: azure;
+    text-decoration: none;
 }
-
 .medio {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     color: azure;
     justify-items: center;
+    padding: 30px;
+    gap: 40px;
 }
 
 
@@ -70,3 +74,20 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
 }
+
+img {
+    align-self: center;
+    height: 100px;
+}
+
+.charts {
+    box-sizing: content-box;
+    display: grid;
+    grid-template-rows: 40px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
+    padding: 10px;
+    justify-items: center;
+    background-color: black;
+    gap: 30px;
+    width: 100%;
+}
+    
