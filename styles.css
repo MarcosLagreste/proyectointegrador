@@ -11,7 +11,7 @@ body {
 .top {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    
+
 }
 .carousel{
     width: 98%;
