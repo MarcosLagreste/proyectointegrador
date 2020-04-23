@@ -95,11 +95,21 @@ img {
 .charts {
     box-sizing: content-box;
     display: grid;
-    grid-template-rows: 40px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px 30px;
+    grid-template-columns: 70% 30%;
+   
     padding: 10px;
-    justify-items: center;
+    justify-items: left;
     background-color: black;
-    gap: 30px;
+    row-gap: 40px;
     width: 100%;
 }
+
+.titulocharts{
+    justify-items: center;
+}
+
+.imageneschart {
+    width: 100px;
+    height: 100px;
     
+}
