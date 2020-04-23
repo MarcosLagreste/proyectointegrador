@@ -4,13 +4,23 @@ body {
     background-size: cover;
 }
 
+.buscador { 
+    justify-self: center;
+    align-self: center;
+    width: 300px;
+    height: 35px;
+    background-color: transparent;
+    color: azure;
+    padding: 10px;
+
+}
 .grid-container {
     padding: 10px;
 
 }
 .top {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
 }
 .carousel{
