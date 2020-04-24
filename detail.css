@@ -1,0 +1,12 @@
+body {
+    background-image: url(https://github.com/MarcosLagreste/proyectointegrador/blob/master/imagenes/fondomaderobueno.jpg?raw=true);
+    background-size: cover;
+}
+.album{
+    display: grid;
+    grid-template-columns: 25% 25%;
+}
+.tracks{
+    display: grid;
+    grid-template-columns: 25% 25%;
+}
