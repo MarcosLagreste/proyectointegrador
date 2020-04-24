@@ -1,12 +1,21 @@
 body {
     background-image: url(https://github.com/MarcosLagreste/proyectointegrador/blob/master/imagenes/fondomaderobueno.jpg?raw=true);
     background-size: cover;
+    margin-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
 }
 .album{
     display: grid;
-    grid-template-columns: 25% 25%;
+    grid-template-columns: 15% 25%;
 }
 .tracks{
     display: grid;
     grid-template-columns: 25% 25%;
+}
+.ul1{
+    font-size: 110%;
+
+}
+#cancion1{
+margin-right: 20px;
 }
