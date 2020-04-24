@@ -17,5 +17,9 @@ body {
 
 }
 #cancion1{
-margin-right: 20px;
+    margin-right: 20px;
+}
+#audio1{
+    padding-left: 5%;
+    padding-right: 20%;
 }
