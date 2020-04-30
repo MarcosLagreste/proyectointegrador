@@ -1,7 +1,6 @@
 body {
     background-image: url(../proyectointegrador/imagenes/fondomaderobueno.jpg   );
-    background-repeat: no-repeat;
-    background-size: cover;
+    margin: 30px;
 }
 
 .buscador { 
@@ -96,20 +95,45 @@ img {
     box-sizing: content-box;
     display: grid;
     grid-template-columns: 70% 30%;
-   
     padding: 10px;
     justify-items: left;
     background-color: black;
     row-gap: 40px;
     width: 100%;
+    border: rgba(255, 255, 255, 0.534);
+    border-radius: 10px;
+    border-style: solid;
 }
 
-.titulocharts{
+.titulochart{
     justify-items: center;
+    padding: 20px;
 }
 
 .imageneschart {
     width: 100px;
     height: 100px;
     
+}
+
+.nomb-cancion {
+    align-self: center;
+}
+
+h1 {
+    color: white;
+}
+
+.chartsplaylist {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+
+}
+
+.chart1playlist{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    color: white;
 }
