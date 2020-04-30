@@ -4,41 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="detail.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="detail">
     <div class="top">
-        <a href="home.html"><img src="/imagenes/Logosinfondo.PNG" class="logo1" alt="logo"></div></a>
-    <div class="main">
-        <div class="artist">
-        <h2>artista</h2>
-        <h3>claptone</h3>
-        <p>Claptone es un DJ alemán y productor de música electrónica,</p>
-        <p>especializado en los sub-géneros techno, house, y Deep house.</p>
+        <a href="home.html">
+        <img src="../proyectointegrador/imagenes/Logosinfondo.PNG" class="logo1" alt="logo">
+    </a>
+        <div class="buscador">
+        <input class="buscador" type="search" placeholder="Buscar . . ." id="inputBusqueda"/>
         </div>
-        <div class="album"><h2>album:</h2>
-        <h3>Charmer</h3>
+    
+    <div class="titulos">
+        <a href=""> Tracks</a>
+    </div>
+    <div class="titulos">
+        <a href=""> Albums</a>
+    </div>
+    <div class="titulos">
+        <a href=""> Artists</a>
+    </div>
+    <div class="titulos">
+        <a href="playlist.html"> Playlist</a>
+    </div>
+    </div>
+    <div class="griddetail">
+        <div class="artist-detail">
+            <div>
+            <h2>Claptone</h2>
+            <img class="imagenartista" src="imagenes/detail img/claptone.jpg" alt="" >
+            </div>
+            <div>
+            <p>Claptone es un DJ alemán y productor de música electrónica,</p>
+            <p>especializado en los sub-géneros techno, house, y Deep house.</p>
+            </div>
         </div>
-        <div class="tracks">
-            <img src="imagenes\album\charmer.jpg" alt="imgAlbum" height="300px" width="300px">
-            <ul class="ul1">
-            <h2>canciones del album:</h2>
-                <div class="li1">
-                <li>No eyes</li>
-                <li>In the beginning</li>
-                <li>the only thing</li>
-                <li>dear life</li>
-                <li>heart beat</li>
-                </div>
-            </ul>
-       <div class="audio">
-            <audio src="audio\claptone-no-eyes-feat-jaw.mp3" type="audio/mp3" controls></audio>
-            <audio src="audio\claptone-in-the-beginning-feat-nathan-nicholson-official-audio.mp3" type="audio/mp3" controls></audio>
-            <audio src="audio\claptone-the-only-thing-official-audio.mp3" type="audio/mp3" controls></audio>
-            <audio src="audio\claptone-dear-life-ft-jaw-official-video.mp3" type="audio/mp3" controls></audio>
-            <audio src="audio\claptone-heartbeat.mp3" type="audio/mp3" controls></audio>
+        <div class="album-detail"><h2>Album</h2>
+            <img class="imagenartista" src="imagenes\album\charmer.jpg" alt="imgAlbum" height="" width="">
+            <h3>Charmer</h3>
         </div>
+    </div>
+        <h2>Canciones del album:</h2>
+    
+        <div class="cuadrocanciones">
+    
+                <div> No eyes </div> 
+                <div><audio src="audio\claptone-no-eyes-feat-jaw.mp3" type="audio/mp3" controls></audio></div>
+                <div>In the Beginning</div>
+                <div><audio src="audio\claptone-in-the-beginning-feat-nathan-nicholson-official-audio.mp3" type="audio/mp3" controls></audio></div>
+                <div>The Only Thing</div>
+                <div><audio src="audio\claptone-the-only-thing-official-audio.mp3" type="audio/mp3" controls></audio></div>
+                <div>Dear Life</div>
+                <div><audio src="audio\claptone-dear-life-ft-jaw-official-video.mp3" type="audio/mp3" controls></audio></div>
+                <div>Heart Beat</div>
+                <div><audio src="audio\claptone-heartbeat.mp3" type="audio/mp3" controls></audio></div>
+
+        
         </div>
+
+
 
     </div>
 </body>
