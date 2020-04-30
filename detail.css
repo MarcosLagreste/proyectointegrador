@@ -3,6 +3,7 @@ body {
     background-size: cover;
     margin-left: 10px;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 110%;
 }
 .album{
     display: grid;
@@ -10,16 +11,17 @@ body {
 }
 .tracks{
     display: grid;
-    grid-template-columns: 25% 25%;
+    grid-template-columns: 25% 25% 25%;
 }
 .ul1{
     font-size: 110%;
-
+}
+.li1{
+ font-size: 150%;
 }
 #cancion1{
     margin-right: 20px;
 }
-#audio1{
-    padding-left: 5%;
-    padding-right: 20%;
+.audio{
+    padding-top: 60px;
 }
