@@ -11,6 +11,7 @@ body {
     background-color: transparent;
     color: azure;
     padding: 10px;
+    border-radius: 10px;
 
 }
 .grid-container {
@@ -122,6 +123,8 @@ img {
 
 h1 {
     color: white;
+    text-align: center;
+    padding: 50px;
 }
 
 .chartsplaylist {
@@ -136,4 +139,7 @@ h1 {
     padding: 20px;
     text-align: center;
     color: white;
+    border: rgba(255, 255, 255, 0.534);
+    border-radius: 10px;
+    border-style: solid;
 }
