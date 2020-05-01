@@ -242,6 +242,11 @@ h1 {
     .titulos{
         font-size: medium;
     }
+    .imagenartista{
+        border-radius: 30%;
+        height: 80%;
+        width: 75%;
+    }
 }
 
 @media only screen and (max-width: 460px) {
@@ -254,7 +259,28 @@ h1 {
         display: grid;
         grid-template-columns: none;
         text-align: center;
-
+    }
+    a {
+        text-align: center;
+    }
+    .top {
+        display: grid;
+        grid: none;
+        justify-content: center;
+    }
+    .imagenartista{
+        border-radius: 30%;
+        height: 80%;
+        width: 75%;
+    }
+    audio {
+        width: 150px;
+        height: 40px;
+    }
+    .griddetail{
+        padding: 0;
+        gap: 0;
+    }
 }
 
 @media only screen and (max-width: 320px) {
@@ -296,11 +322,12 @@ h1 {
         height: 300px;
     }
     .imagenartista {
-        width: 200px;
-        height: 100%;
+        width: 80%;
+        height: 75%;
     }
     .griddetail{
         padding: 0;
+        gap: 0;
     }
     audio {
         width: 20px;
@@ -308,5 +335,8 @@ h1 {
     }
     .video{
         width: 100%;
+    }
+    .scotts{
+        padding: 0;
     }
 }
