@@ -177,3 +177,12 @@ h1 {
 .audiocancion{
     grid-template-rows: 1fr 1fr;
 }
+@media only screen and (max-width: 1200px) {
+
+}
+@media only screen and (max-width: 768px) {
+
+}
+@media only screen and (max-width: 320px) {
+    
+}
