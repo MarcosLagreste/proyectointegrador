@@ -185,6 +185,7 @@ h1 {
     display: grid;
     gap: 40px;
     justify-items: center;
+    text-align: center;
 }
 .audiocancion{
     grid-template-rows: 1fr 1fr;
@@ -291,5 +292,8 @@ h1 {
     audio {
         width: 20px;
         height: 30px;
+    }
+    .video{
+        width: 100%;
     }
 }
