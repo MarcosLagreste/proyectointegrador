@@ -87,7 +87,7 @@ a {
 
 .bot {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 
 }
 
@@ -209,6 +209,10 @@ h1 {
         display: grid;
         grid-template-columns: 16% 16% 16% 16% 16% 16%;
     }
+    .bot {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 20%;
+    }
 
     .medio {
         display: grid;
@@ -260,6 +264,10 @@ h1 {
     .top {
         display: grid;
         grid: none;
+    }
+    .bot {
+        display: grid;
+        grid-template-columns: none;
     }
     .imageneschart {
         width: 100%;
