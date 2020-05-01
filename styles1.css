@@ -280,4 +280,9 @@ h1 {
     .griddetail{
         padding: 0;
     }
+    audio {
+        width: 20px;
+        height: 30px;
+    }
+    }
 }
