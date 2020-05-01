@@ -177,7 +177,7 @@ h1 {
     gap: 20px;
     justify-items: center;
     border-radius: 30px;
-    align-self: center;
+    align-items: center;
 }
 
 .videocancion{
@@ -197,11 +197,11 @@ h1 {
 
 @media only screen and (max-width: 1200px) {
 
-    .charts{
-        grid-template-columns: 65% 30%;
+    .charts {
+        grid-template-columns: 2fr 1fr;
     }
-
 }
+
 
 @media only screen and (max-width: 768px) {
 
@@ -232,6 +232,13 @@ h1 {
     }
 
 }
+
+@media only screen and (max-width: 600px) {
+    .charts{
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
 @media only screen and (max-width: 320px) {
 
     .charts{
