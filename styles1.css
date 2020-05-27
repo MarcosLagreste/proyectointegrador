@@ -22,7 +22,7 @@ body {
     padding: 10px;
 
 }
-.top {
+#header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 
@@ -250,7 +250,7 @@ h1 {
 }
 
 @media only screen and (max-width: 460px) {
-    .top {
+    #header {
         display: grid;
         grid: none;
         text-align: center;
@@ -263,7 +263,7 @@ h1 {
     a {
         text-align: center;
     }
-    .top {
+    #header {
         display: grid;
         grid: none;
         justify-content: center;
@@ -301,7 +301,7 @@ h1 {
         text-align: center;
     }
 
-    .top {
+    #header {
         display: grid;
         grid: none;
     }
