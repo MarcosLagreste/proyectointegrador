@@ -24,7 +24,10 @@ body {
 }
 header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: rgba(0, 0, 0, 0.555);
+    border-radius: 10px;
+
 
 }
 .carousel{
@@ -68,12 +71,29 @@ header {
     align-self: center;
     justify-self: center;
     font-size: x-large;
+    
+}
+
+.imgredes{
+ width: 15%;
+}
+
+.redesSociales{
+    color: azure;    
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 a { 
     color: azure;
     text-decoration: none;
     justify-self: center;
+    text-align: center;
+    align-self: center;
+   
 }
 .medio {
     display: grid;
@@ -85,9 +105,10 @@ a {
 }
 
 
-.bot {
+footer {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+   
 
 }
 
@@ -195,6 +216,10 @@ h1 {
     text-align: center;
 
 }  
+
+.logodeezer{
+    width: 25%;
+}
 
 @media only screen and (max-width: 1200px) {
 
