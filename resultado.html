@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="styles1.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResultadoDeBusqueda</title>
+</head>
+<body>
+    <header>
+        <a href="home.html">
+        <img src="imagenes\Logosinfondo.PNG" class="logo1" alt="logo">
+        </a>
+        <div class="buscador">
+        <form action="resultado.html" method="GET">
+        <input type="text" name="search" placeholder="Buscar . . ." id="inputBusqueda"/>
+        </div>
+
+        <div class="titulos">
+            <a href="generos.html"> Géneros</a>
+        </div>
+        <div class="titulos">
+        <a href=""> Tracks</a>
+        </div>
+        <div class="titulos">
+        <a href=""> Albums</a>
+        </div>
+        <div class="titulos">
+        <a href=""> Artists</a>
+        </div>
+        <div class="titulos">
+        <a href="playlist.html"> Playlist</a>
+        </div>
+    </header>
+    <h1>Tus resultados de búsqueda:</h1>
+    <ul class="lista"></ul>
+
+    <script src="js/resultado.js"></script>
+    <p>puede llegar a tardar en cargar</p>
+</body>
+</html>
