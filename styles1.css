@@ -220,6 +220,21 @@ h1 {
 .logodeezer{
     width: 25%;
 }
+.infochartsdetail{
+    justify-self: center;
+}
+h2{
+    color: white;
+}
+
+.resultadoschart{
+    background-color: rgba(0, 0, 0, 0.651);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+    padding: 40px;
+    border-radius: 30px;
+}
 
 @media only screen and (max-width: 1200px) {
 
