@@ -18,9 +18,30 @@ fetch(url)
         let lista= document.querySelector (".resultados");
         let resultados = datos.data;
         resultados.forEach(function(resultado){
-            lista.innerHTML += "<li>" + resultado.name + "</li>"
+            lista.innerHTML += "<li>" + '<a href="detail2.html?id=' + resultado.id+ '">'+ resultado.name + '</a></li>'
+           
         });
     })
     .catch(function(error){
         console.log(error);
     })
+
+
+
+//let url1 = proxy +  "https://api.deezer.com/chart/0/tracks" + s
+
+//fetch(url1)
+//    .then (function(response){
+//        return response.json();
+//    })
+//    .then (function(datos){
+//        console.log(datos);
+//        let resultados1 = document.querySelector (".resultados1")
+//        resultado = datos.data
+//        resultados1.for(function(resultado){
+//            resultados1.innerHTML += "<a href='detail2.html'> <li>" + resultado.title + "</li></a>"
+//        })
+//    .catch(function(error){
+//        console.log(error);
+//     })
+    
