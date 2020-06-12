@@ -18,7 +18,7 @@ fetch(url)
         console.log (datos)
 
         resultados.forEach (function(track){
-            tracks.innerHTML += "<li>" + track.title + "</li>"
+            tracks.innerHTML += "<li>" + "<a href='detail2.html?type=artist&id="  + track.id + "'>" + track.title + "</li>"
         })
         resultados.forEach (function(imagenes){
         imagChart.innerHTML += "<img src='" +  imagenes.artist.picture + "'>"
@@ -45,7 +45,7 @@ let url1= proxy + "https://api.deezer.com/chart/0/albums";
         console.log (datos)
 
         resultados.forEach (function(albums){
-            album.innerHTML += "<li>" + albums.title + "</li>"
+            album.innerHTML += "<li>" + "<a href='detail2.html?type=artist&id="  + albums.id + "'>" + albums.title + "</li>"
         })
         resultados.forEach (function(imagenes){
         imagChart1.innerHTML += "<img src='" +  imagenes.artist.picture + "'>"
@@ -72,7 +72,7 @@ fetch(url2)
     console.log (datos)
 
     resultados.forEach (function(artista){
-        artistas.innerHTML += "<li>" + artista.name + "</li>"
+        artistas.innerHTML +=  "<li>" + "<a href='detail2.html?type=artist&id="  + artista.id + "'>" + artista.name + "</li>"
     })
     resultados.forEach (function(imagenes){
         imagChart2.innerHTML += "<img src='" +  imagenes.picture + "'>"
