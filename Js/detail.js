@@ -3,7 +3,8 @@ let datos = new URLSearchParams (queryString);
 let id = datos.get('id');
 let type = datos.get ("type")
 
-//ARTIST
+//buscador de artist tracks y albums....
+
 let proxy = "https://cors-anywhere.herokuapp.com/";
 let url = proxy + "https://api.deezer.com/" + type + "/" + id;
 
@@ -29,6 +30,7 @@ fetch (url)
         console.log(error);
         
     })
+
 
 
 
