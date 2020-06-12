@@ -30,31 +30,5 @@ fetch (url)
         
     })
 
-//ALBUMS
 
-let idAlbums = datos.get("id")
-let url2 = proxy +   "https://api.deezer.com/album/" + idAlbums;
-
-
-fetch (url2)
-    .then (function(response){
-        return response.json()
-    })
-    .then (function(datos){
-        console.log(datos);
-        let nameDetail = document.querySelector (".nameDetail")
-        nameDetail.innerHTML = datos.title
-
-
-        let imagenartista = document.querySelector (".imagenartista")
-        
-
-        let infoArtistaDetail = document.querySelector(".infoArtistaDetail")
-    
-
-    })
-    .catch(function(error){
-        console.log(error);
-        
-    })
 
