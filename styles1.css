@@ -6,15 +6,12 @@ body {
 }
 
 .buscador { 
-    justify-self: center;
     align-self: center;
-    width: 100%;
-    height: 35px;
+}
+.buscador1{
+    width: 80%;
+    height: 25px;
     background-color: transparent;
-    color: azure;
-    padding: 10px;
-    border-radius: 10px;
-
 }
 .grid-container {
     padding: 10px;
