@@ -64,7 +64,7 @@ fetch (url2)
     })
 
     //PlAYLIST
-
+    let idTrack = datos.get('id');
     let player = document.querySelector('iframe');
     player.src = 'https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=' + idTrack + '&app_id=1'
     let recuperoStorage = localStorage.getItem('playlist');
