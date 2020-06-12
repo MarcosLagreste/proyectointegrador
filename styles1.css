@@ -240,7 +240,12 @@ h2{
     padding: 40px;
     border-radius: 30px;
 }
+.generosStyle{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
 
+}
 @media only screen and (max-width: 1200px) {
 
     .charts {
