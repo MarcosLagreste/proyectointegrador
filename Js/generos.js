@@ -20,4 +20,4 @@ fetch(url)
         console.log(error);
         
     })
->>>>>>> 3144e30b03e77e0bb9620b1136a3e3e67dceaa47
+
