@@ -18,7 +18,7 @@ fetch(url)
         let lista= document.querySelector (".resultados");
         let resultados = datos.data;
         resultados.forEach(function(resultado){
-            lista.innerHTML += "<li>" + '<a href="detail2.html?id=' + resultado.id+ '">'+ resultado.name + '</a></li>'
+            lista.innerHTML += "<li>" + '<a href="detail2.html?type=artist&id=' + resultado.id+ '">'+ resultado.name + '</a></li>'
            
         });
     })
@@ -39,7 +39,7 @@ fetch(url1)
         let resultadostracks = document.querySelector (".resultadostracks")
         let resultados = datos.data;
         resultados.forEach(function(track){
-            resultadostracks.innerHTML += "<li>" + '<a href="detail2.html?id=' + track.id+ '">'+ track.title + '</a></li>'
+            resultadostracks.innerHTML += "<li>" + '<a href="detail2.html?type=track&id=' + track.id + '">'+ track.title + '</a></li>'
         })
         
     })
@@ -60,7 +60,7 @@ fetch(url2)
         let resultadosalbum = document.querySelector (".resultadosalbums")
         let resultados2 = datos.data;
         resultados2.forEach(function(album){
-            resultadosalbum.innerHTML += "<li>" + '<a href="detail2.html?id=' + album.id+ '">'+ album.title + '</a></li>'
+            resultadosalbum.innerHTML += "<li>" + '<a href="detail2.html?type=album&id=' + album.id+ '">'+ album.title + '</a></li>'
             console.log(datos)
         })
         
