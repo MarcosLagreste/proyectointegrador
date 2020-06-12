@@ -1,10 +1,11 @@
 let queryString = location.search;
 let datos = new URLSearchParams (queryString);
-let idArtist = datos.get('id');
+let id = datos.get('id');
+let type = datos.get ("type")
 
 //ARTIST
 let proxy = "https://cors-anywhere.herokuapp.com/";
-let url = proxy + "https://api.deezer.com/artist/" + idArtist;
+let url = proxy + "https://api.deezer.com/" + type + "/" + id;
 
 fetch (url)
     .then (function(response){
@@ -12,7 +13,7 @@ fetch (url)
     })
     .then (function(datos){
         console.log(datos);
-        let nameDetail = document.querySelector (".nameDetail")
+        let nameDetail = document.querySelector (".nameDetail") 
         nameDetail.innerHTML = datos.name
 
 
@@ -28,32 +29,11 @@ fetch (url)
         
     })
 
-//TRACKS
+if (type == "artist"){
+     
 
- let idTracks = datos.get("id") 
- let url1 = proxy +   "https://api.deezer.com/track/" + idTracks;
+    }
 
- fetch (url1)
-    .then (function(response){
-        return response.json()
-    })
-    .then (function(datos){
-        console.log(datos);
-        let nameDetail = document.querySelector (".nameDetail")
-        nameDetail.innerHTML = datos.title
-
-
-        let imagenartista = document.querySelector (".imagenartista")
-        
-
-        let infoArtistaDetail = document.querySelector(".infoArtistaDetail")
-    
-
-    })
-    .catch(function(error){
-        console.log(error);
-        
-    })
 
 //ALBUMS
 
