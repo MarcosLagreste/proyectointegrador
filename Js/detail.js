@@ -13,13 +13,14 @@ fetch (url)
     })
     .then (function(datos){
         console.log(datos);
+        //nombre
         let nameDetail = document.querySelector (".nameDetail") 
         nameDetail.innerHTML = datos.name
-
-
+        //imagen
         let imagenartista = document.querySelector (".imagenartista")
-        imagenartista.innerHTML = datos.picture_medium
-
+        imagenartista.innerHTML =  "<img src='" +   datos.picture_medium + "'>"
+       
+        //album mas escuchado
         let infoArtistaDetail = document.querySelector(".infoArtistaDetail")
     
 
@@ -28,12 +29,6 @@ fetch (url)
         console.log(error);
         
     })
-
-if (type == "artist"){
-     
-
-    }
-
 
 //ALBUMS
 

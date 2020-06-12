@@ -186,11 +186,7 @@ h1 {
     text-align: center;
 
 }
-.imagenartista{
-    border-radius: 70px;
-    height: 300px;
-    width: 500px;    
-}
+
 
 .cuadrocanciones{
     display: grid;
