@@ -12,8 +12,15 @@ fetch(url)
         //console.log(datos);
 
         resultados.forEach (function(genre){
-            generos.innerHTML += "<li>" + '<a href="detail2.html?type=genre&id=' + genre.id+ '">'+ genre.name + '<img src="' + genre.picture + '">' + '</a>' + '</li>'
-        });        
+            generos.innerHTML += "<div class='estitlogenres'><a href=detail2.html?type=genre&id='" + genre.id + "><li class='ligenres'>"  + genre.name + "</li>" + "<div class='estiloimagengenres'>" + '<img src="' + genre.picture + '">'+ "</div></a></div>" 
+        });
+        
+        
+
+
+
+
+
     })
 //let imgGenero =  "https://api.deezer.com/genre/" 
     .catch (function(error){
