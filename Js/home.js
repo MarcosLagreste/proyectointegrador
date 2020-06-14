@@ -17,12 +17,24 @@ fetch(url)
         let imagChart = document.querySelector (".imagChart")
         console.log (datos)
 
+        //carrousel
+        let albums1 = document.querySelector (".albums1")
+        albums1.innerHTML = "<img src='" +  resultados[0].artist.picture_xl + "'>"
+        let albums2 = document.querySelector (".albums2")
+        albums2.innerHTML = "<img src='" +  resultados[1].artist.picture_xl + "'>"
+        let albums3 = document.querySelector (".albums3")
+        albums3.innerHTML = "<img src='" +  resultados[2].artist.picture_xl + "'>"
+        let albums4 = document.querySelector (".albums4")
+        albums4.innerHTML = "<img src='" +  resultados[3].artist.picture_xl + "'>"
+        let albums5 = document.querySelector (".albums5")
+        albums5.innerHTML = "<img src='" +  resultados[4].artist.picture_xl + "'>"
+        
         resultados.forEach (function(track){
-            tracks.innerHTML += "<li>" + "<a href='detail2.html?type=artist&id="  + track.id + "'>" + track.title + "</li>"
+            tracks.innerHTML += "<div class='estilocharts'><li>" + "<a href='detail2.html?type=track&id="  + track.id + "'>" + track.title + "</li>" + "<img src='" +  track.artist.picture + "'> </div>"
+            
+
         })
-        resultados.forEach (function(imagenes){
-        imagChart.innerHTML += "<img src='" +  imagenes.artist.picture + "'>"
-        })
+        
         
     })
     .catch (function(error){
@@ -45,11 +57,9 @@ let url1= proxy + "https://api.deezer.com/chart/0/albums";
         console.log (datos)
 
         resultados.forEach (function(albums){
-            album.innerHTML += "<li>" + "<a href='detail2.html?type=artist&id="  + albums.id + "'>" + albums.title + "</li>"
+            album.innerHTML +=  "<div class='estilocharts'> <li>" + "<a href='detail2.html?type=album&id="  + albums.id + "'>" + albums.title + "</li>" + "<img src='" +  albums.artist.picture + "'> </div>"
         })
-        resultados.forEach (function(imagenes){
-        imagChart1.innerHTML += "<img src='" +  imagenes.artist.picture + "'>"
-        })
+        
     })
     .catch (function(error){
         console.log(error);
@@ -72,11 +82,9 @@ fetch(url2)
     console.log (datos)
 
     resultados.forEach (function(artista){
-        artistas.innerHTML +=  "<li>" + "<a href='detail2.html?type=artist&id="  + artista.id + "'>" + artista.name + "</li>"
+        artistas.innerHTML +=  "<div class='estilocharts'> <li>" + "<a href='detail2.html?type=artist&id="  + artista.id + "'>" + artista.name + "</li>" + "<img src='" +  artista.picture + "'> </div>" 
     })
-    resultados.forEach (function(imagenes){
-        imagChart2.innerHTML += "<img src='" +  imagenes.picture + "'>"
-        })
+    
 })
 .catch (function(error){
     console.log(error);

@@ -7,11 +7,13 @@ body {
 
 .buscador { 
     align-self: center;
+    color: white
 }
 .buscador1{
     width: 80%;
     height: 25px;
     background-color: transparent;
+    color: white;
     
 }
 .grid-container {
@@ -35,6 +37,34 @@ header {
     overflow: hidden;
 }
 .albums1 img{
+    width: 20%;
+    max-height: 400px;
+    height: 720px;
+    float: left;
+
+}
+.albums2 img{
+    width: 20%;
+    max-height: 400px;
+    height: 720px;
+    float: left;
+
+}
+.albums3 img{
+    width: 20%;
+    max-height: 400px;
+    height: 720px;
+    float: left;
+
+}
+.albums4 img{
+    width: 20%;
+    max-height: 400px;
+    height: 720px;
+    float: left;
+
+}
+.albums5 img{
     width: 20%;
     max-height: 400px;
     height: 720px;
@@ -94,6 +124,11 @@ a {
 .cuadroPlaylistInterno{
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+.estilocharts{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: center;
 }
 .medio {
     display: grid;

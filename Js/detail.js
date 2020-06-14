@@ -21,11 +21,16 @@ fetch (url)
         //imagen
         let imagenartista = document.querySelector (".imagenartista")
         imagenartista.innerHTML =  "<img src='" +   datos.picture_xl + "'>"
-        
-       
+        //top 5 canciones
+        let albumTrack = document.querySelector (".albumTrack")
+            albumTrack.innerHTML = "Top 5 canciones:"   
         // numero de albums
         let infoArtistaDetail = document.querySelector(".infoArtistaDetail")
         infoArtistaDetail.innerHTML = "Numero de albums: "+ datos.nb_album
+         // album detail
+         let albumdetail = document.querySelector(".album-detail")
+         albumdetail.innerHTML = "Album de la cancion mas escuchada:"  
+         
 
         //tracklist 5 temas
         let urltracklist = proxy + "https://api.deezer.com/artist/"+ id + "/top?limit=5"
@@ -35,18 +40,22 @@ fetch (url)
             })
             .then (function(datostracklist){
                 console.log(datostracklist);
-
+                
+                //segunda imagen
                 let resulttracklist = datostracklist.data
+                let imagenartista2 = document.querySelector (".imagenartista2")
+                imagenartista2.innerHTML =  "<img src='" + resulttracklist[0].album.cover_xl + "'>"
+                // info del album 
+                let infodelalbum = document.querySelector(".infodelalbum") 
+                infodelalbum.innerHTML = resulttracklist[0].album.title
                 let cuadrocanciones = document.querySelector(".cuadrocanciones")
 
                 resulttracklist.forEach(function(resultado){
                     cuadrocanciones.innerHTML += "<a href='detail2.html?type=" + resultado.type + "&id="  + resultado.id + "'>" + resultado.title + "</li>"
                 })
+            
 
-
-                //segunda imagen
-                let imagenartista2 = document.querySelector (".imagenartista2")
-                 imagenartista2.innerHTML = "<img src='" +   datostracklist.cover_big + "'>"
+                
             })
             
             .catch (function (errortracklist){
@@ -60,7 +69,44 @@ fetch (url)
 
         }
         if (type == "album"){
+        fetch (url)
+            .then (function(response){
+                return response.json()
+            })
+            .then (function(datosalbum){
+            //nombre
+            let nameDetail = document.querySelector (".nameDetail") 
+            nameDetail.innerHTML = "Artista:    " + datosalbum.artist.name
+            //imagen cancion
+            let imagenartista = document.querySelector (".imagenartista")
+            imagenartista.innerHTML =  "<img src='" +   datosalbum.artist.picture_xl + "'>"
+             //info del artista o track
+             let infoArtistaDetail = document.querySelector(".infoArtistaDetail")
+             infoArtistaDetail.innerHTML = null
+              //imagen albun
+            let imagenalbum = document.querySelector (".imagenartista2")
+            imagenalbum.innerHTML = "<img src='" +   datosalbum.cover_xl + "'>"
+            //info del album
+            let infodelalbum = document.querySelector (".infodelalbum")
+            infodelalbum.innerHTML = datosalbum.title
+            //track escuchado
+            let albumTrack = document.querySelector (".albumTrack")
+            albumTrack.innerHTML = "Canciones del album:"
 
+            //lista de tracks
+            console.log(datosalbum);
+            
+            let tracksalbum = datosalbum.tracks.data
+            let cuadrocanciones = document.querySelector(".cuadrocanciones")
+            tracksalbum.forEach(function(resultado){
+                cuadrocanciones.innerHTML += "<a href='detail2.html?type=" + resultado.type + "&id="  + resultado.id + "'>" + resultado.title + "</li>"
+            }) 
+
+            })
+            .catch(function(error){
+                console.log(error);
+                
+            })
         }
         //TRACKS
         if  (type == "track"){
@@ -83,7 +129,7 @@ fetch (url)
             imagenalbum.innerHTML = "<img src='" +   datostracks.album.cover_xl + "'>"
             //track escuchado
             let albumTrack = document.querySelector (".albumTrack")
-            albumTrack.innerHTML = "Cancion:"
+            albumTrack.innerHTML = "Canción:"
             //info del album
             let infodelalbum = document.querySelector (".infodelalbum")
             infodelalbum.innerHTML = datostracks.album.title
@@ -98,7 +144,22 @@ fetch (url)
 
         }
         if (type == "genre"){
-
+            let urlgenre = "https://api.deezer.com/genre/" + id + "/artists"
+            fetch (urlgenre) 
+                .then (function(response){
+                    return response.json()
+                })
+                .then (function(datosgenre){
+                //nombre
+                let nameDetail = document.querySelector (".nameDetail") 
+                nameDetail.innerHTML = datosgenre.name
+                //imagen cancion
+                let imagenartista = document.querySelector (".imagenartista")
+                imagenartista.innerHTML =  "<img src='" +   datosgenre.picture_xl + "'>"
+                })
+                .catch (function(error){
+                    console.log(error);
+                })
         }
     
 
