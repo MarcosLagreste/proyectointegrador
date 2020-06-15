@@ -34,10 +34,12 @@ function buscarYMostrarTrack(idTrack){
         })
 };
     //PlAYLIST
+    let queryString = location.search;
+    let datos = new URLSearchParams (queryString);
     let idTrack = datos.get('id');
     let player = document.querySelector('iframe');
     player.src = 'https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=' + idTrack + '&app_id=1'
-    let recuperoStorage = localStorage.getItem('playlist');
+/*/    let recuperoStorage = localStorage.getItem('playlist');
     if(recuperoStorage == null){
         playlist = [];
     } else {
@@ -61,4 +63,4 @@ function buscarYMostrarTrack(idTrack){
         let playlistParaStorage = JSON.stringify(playlist);
         localStorage.setItem('playlist', playlistParaStorage);
         console.log(localStorage);
-        })
+        })/*/ 
