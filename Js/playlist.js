@@ -26,7 +26,7 @@ function buscarYMostrarTrack(idTrack){
             return response.json();
         })
         .then(function (track) {
-            playlistWrapper.innerHTML += '<li>' + '<a href="track.html?id=' + track.id + '">' + track.title + '</a></li>' 
+            playlistWrapper.innerHTML += '<li>' + '<a href="detail2.html?type=track&id=' + track.id + '">' + track.title + '</a></li>' 
         })
         .catch(function(errors){
             console.log(errors);
@@ -58,7 +58,7 @@ function buscarYMostrarAlbum(idAlbum){
             return response.json();
         })
         .then(function (album) {
-            playlistWrapperAlbum.innerHTML += '<li>' + '<a href="track.html?id=' + album.id + '">' + album.title + '</a></li>' 
+            playlistWrapperAlbum.innerHTML += '<li>' + '<a href="detail2.html?type=album&id=' + album.id + '">' + album.title + '</a></li>' 
         })
         .catch(function(errors){
             console.log(errors);
