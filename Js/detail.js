@@ -266,4 +266,8 @@ fetch (url)
     if  (type == "genre"){
         document.querySelector(".agregarAlbum").style.display = 'none';
         document.querySelector(".agregarTrack").style.display = 'none';
-    }        
+    }
+    if  (type == "artist"){
+        document.querySelector(".agregarAlbum").style.display = 'none';
+        document.querySelector(".agregarTrack").style.display = 'none';
+    }
