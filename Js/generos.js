@@ -12,7 +12,7 @@ fetch(url)
         //console.log(datos);
 
         resultados.forEach (function(genre){
-            generos.innerHTML += "<div class='estitlogenres'><a href=detail2.html?type=genre&id='" + genre.id + "><li class='ligenres'>"  + genre.name + "</li>" + "<div class='estiloimagengenres'>" + '<img src="' + genre.picture + '">'+ "</div></a></div>" 
+            generos.innerHTML += "<div class='estitlogenres'><a href=detail2.html?type=genre&id=" + genre.id + "><li class='ligenres'>"  + genre.name + "</li>" + "<div class='estiloimagengenres'>" + '<img src="' + genre.picture + '">'+ "</div></a></div>" 
         });
         
         
@@ -22,7 +22,7 @@ fetch(url)
 
 
     })
-//let imgGenero =  "https://api.deezer.com/genre/" 
+    //let imgGenero =  "https://api.deezer.com/genre/" 
     .catch (function(error){
         console.log(error);
         

@@ -26,7 +26,7 @@ fetch (url)
             albumTrack.innerHTML = "Top 5 canciones:"   
         // numero de albums
         let infoArtistaDetail = document.querySelector(".infoArtistaDetail")
-        infoArtistaDetail.innerHTML = "Numero de albums: "+ datos.nb_album
+        infoArtistaDetail.innerHTML = "Numero de fans: "+ datos.nb_fan
          // album detail
          let albumdetail = document.querySelector(".album-detail")
          albumdetail.innerHTML = "Album de la cancion mas escuchada:"  
@@ -44,7 +44,7 @@ fetch (url)
                 //segunda imagen
                 let resulttracklist = datostracklist.data
                 let imagenartista2 = document.querySelector (".imagenartista2")
-                imagenartista2.innerHTML =  "<img src='" + resulttracklist[0].album.cover_xl + "'>"
+                imagenartista2.innerHTML =  "<a href='detail2.html?type=album&id=" + resulttracklist[0].album.id + "'>"+ "<img src='" + resulttracklist[0].album.cover_xl + "'>"
                 // info del album 
                 let infodelalbum = document.querySelector(".infodelalbum") 
                 infodelalbum.innerHTML = resulttracklist[0].album.title
@@ -76,19 +76,19 @@ fetch (url)
             .then (function(datosalbum){
             //nombre
             let nameDetail = document.querySelector (".nameDetail") 
-            nameDetail.innerHTML = "Artista:    " + datosalbum.artist.name
+            nameDetail.innerHTML =  "<a href='detail2.html?type=artist&id=" + datosalbum.artist.id + "'>" + "Artista:    " + datosalbum.artist.name
             //imagen cancion
             let imagenartista = document.querySelector (".imagenartista")
-            imagenartista.innerHTML =  "<img src='" +   datosalbum.artist.picture_xl + "'>"
-             //info del artista o track
+            imagenartista.innerHTML =  "<a href='detail2.html?type=artist&id=" + datosalbum.artist.id + "'>"+"<img src='" +   datosalbum.artist.picture_xl + "'>"
+            //info del artista o track
              let infoArtistaDetail = document.querySelector(".infoArtistaDetail")
              infoArtistaDetail.innerHTML = null
-              //imagen albun
+            //imagen albun
             let imagenalbum = document.querySelector (".imagenartista2")
             imagenalbum.innerHTML = "<img src='" +   datosalbum.cover_xl + "'>"
             //info del album
             let infodelalbum = document.querySelector (".infodelalbum")
-            infodelalbum.innerHTML = datosalbum.title
+            infodelalbum.innerHTML = datosalbum.title + "<p>" + "Fecha de salida: " + datosalbum.release_date + "</p>" 
             //track escuchado
             let albumTrack = document.querySelector (".albumTrack")
             albumTrack.innerHTML = "Canciones del album:"
@@ -121,13 +121,13 @@ fetch (url)
             nameDetail.innerHTML = "Canción:  " + datostracks.title
             //imagen cancion
             let imagenartista = document.querySelector (".imagenartista")
-            imagenartista.innerHTML =  "<img src='" +   datostracks.artist.picture_xl + "'>"
+            imagenartista.innerHTML = "<a href='detail2.html?type=artist&id="+ datostracks.artist.id + "'>" + "<img src='" +   datostracks.artist.picture_xl + "'>"
             //info del artista o track
             let infoArtistaDetail = document.querySelector(".infoArtistaDetail")
-            infoArtistaDetail.innerHTML = "Nombre del artista: " + datostracks.artist.name
+            infoArtistaDetail.innerHTML = "Nombre del artista: " +  "<a href='detail2.html?type=artist&id="+ datostracks.artist.id + "'>" + datostracks.artist.name
             //imagen albun
             let imagenalbum = document.querySelector (".imagenartista2")
-            imagenalbum.innerHTML = "<img src='" +   datostracks.album.cover_xl + "'>"
+            imagenalbum.innerHTML = "<a href='detail2.html?type=album&id=" + datostracks.album.id + "'>" +"<img src='" +   datostracks.album.cover_xl + "'>"
             //track escuchado
             let albumTrack = document.querySelector (".albumTrack")
             albumTrack.innerHTML = "Canción:"
@@ -145,7 +145,8 @@ fetch (url)
 
         }
         if (type == "genre"){
-            let urlgenre = "https://api.deezer.com/genre/" + id + "/artists"
+            let urlgenre = proxy + "https://api.deezer.com/genre/" + id 
+            
             fetch (urlgenre) 
                 .then (function(response){
                     return response.json()
@@ -157,9 +158,42 @@ fetch (url)
                 //imagen cancion
                 let imagenartista = document.querySelector (".imagenartista")
                 imagenartista.innerHTML =  "<img src='" +   datosgenre.picture_xl + "'>"
+                 //lista de artistas
+                 let albumTrack = document.querySelector (".albumTrack")
+                 albumTrack.innerHTML = "Artistas del género:"
+                 // primer artista foto: (artista mas escuchado del genero:(?...)
+                 let albumdetail = document.querySelector(".album-detail")
+                 albumdetail.innerHTML = "Artista más escuchado del genero:" 
+                 
+                 
+                })
+               
+                .catch (function(error){
+                    console.log(error);
+                })
+            let urlgenreartist = proxy + "https://api.deezer.com/genre/" + id + "/artists"
+            fetch (urlgenreartist)
+                .then (function(response){
+                    return response.json()
+                })
+                .then (function(datosgenreartist){
+                        console.log(datosgenreartist); 
+                   
+                    let artistss = datosgenreartist.data
+                     //imagen artista mas escuchado
+                     let imagenalbum = document.querySelector (".imagenartista2")
+                     imagenalbum.innerHTML = "<a href='detail2.html?type=artist&id=" + artistss[0].id + "'>" +"<img src='" +   artistss[0].picture_xl + "'>"
+                     //cuadro de artists
+                    let cuadrocanciones = document.querySelector(".cuadrocanciones")
+                    artistss.forEach(function(resultado){
+                        cuadrocanciones.innerHTML += "<a href='detail2.html?type=" + resultado.type + "&id="  + resultado.id + "'>" + resultado.name + "</li>"
+                    
+                    
+                    }) 
                 })
                 .catch (function(error){
                     console.log(error);
+                    
                 })
         }
     
