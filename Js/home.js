@@ -28,7 +28,16 @@ fetch(url)
         albums4.innerHTML = "<img src='" +  resultados[3].artist.picture_xl + "'>"
         let albums5 = document.querySelector (".albums5")
         albums5.innerHTML = "<img src='" +  resultados[4].artist.picture_xl + "'>"
-        
+        let albums6 = document.querySelector (".albums6")
+        albums6.innerHTML = "<img src='" +  resultados[5].artist.picture_xl + "'>"
+        let albums7 = document.querySelector (".albums7")
+        albums7.innerHTML = "<img src='" +  resultados[6].artist.picture_xl + "'>"
+        let albums8 = document.querySelector (".albums8")
+        albums8.innerHTML = "<img src='" +  resultados[7].artist.picture_xl + "'>"
+        let albums9 = document.querySelector (".albums9")
+        albums9.innerHTML = "<img src='" +  resultados[8].artist.picture_xl + "'>"
+        let albums10 = document.querySelector (".albums10")
+        albums10.innerHTML = "<img src='" +  resultados[9].artist.picture_xl + "'>"
         resultados.forEach (function(track){
             tracks.innerHTML += "<div class='estilocharts'><li>" + "<a href='detail2.html?type=track&id="  + track.id + "'>" + track.title + "</li>" + "<img src='" +  track.artist.picture + "'> </div>"
             

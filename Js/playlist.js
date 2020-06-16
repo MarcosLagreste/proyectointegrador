@@ -37,9 +37,31 @@ function buscarYMostrarTrack(idTrack){
     let queryString = location.search;
     let datos = new URLSearchParams (queryString);
     let idTrack = datos.get('id');
-    let player = document.querySelector('iframe');
-    player.src = 'https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=' + idTrack + '&app_id=1'
-/*/    let recuperoStorage = localStorage.getItem('playlist');
+    let url1 = proxy + "https://api.deezer.com/track/" + idTrack
+
+fetch(url1)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(datos){
+        console.log(datos);
+
+        //Resolvemos qué hacemos con los datos
+        let titulo = document.querySelector('.titulo');
+        titulo.innerHTML += datos.title;
+        
+        let interprete = document.querySelector('.interprete');
+        interprete.innerHTML += datos.artist.name
+        
+        let album = document.querySelector('.album');
+        album.innerHTML += datos.album.title
+
+        //el player.
+        let player = document.querySelector('iframe');
+        player.src = 'https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=' + idTrack + '&app_id=1'
+    })
+        
+    /*/    let recuperoStorage = localStorage.getItem('playlist');
     if(recuperoStorage == null){
         playlist = [];
     } else {
