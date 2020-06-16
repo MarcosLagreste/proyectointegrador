@@ -79,11 +79,11 @@ fetch (url)
             nameDetail.innerHTML = "Artista:    " + datosalbum.artist.name
             //imagen cancion
             let imagenartista = document.querySelector (".imagenartista")
-            imagenartista.innerHTML =  "<img src='" +   datosalbum.artist.picture_xl + "'>"
-             //info del artista o track
+            imagenartista.innerHTML =  "<a href='detail2.html?type=artist&id=" + datosalbum.artist.id + "'>"+"<img src='" +   datosalbum.artist.picture_xl + "'>"
+            //info del artista o track
              let infoArtistaDetail = document.querySelector(".infoArtistaDetail")
              infoArtistaDetail.innerHTML = null
-              //imagen albun
+            //imagen albun
             let imagenalbum = document.querySelector (".imagenartista2")
             imagenalbum.innerHTML = "<img src='" +   datosalbum.cover_xl + "'>"
             //info del album
