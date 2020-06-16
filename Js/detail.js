@@ -204,8 +204,6 @@ fetch (url)
         
     })
         //Playlist
-        let queryString = location.search;
-        let datos = new URLSearchParams (queryString);
         let idTrack = datos.get('id');
         let recuperoStorage = localStorage.getItem('playlist');
         if(recuperoStorage == null){
