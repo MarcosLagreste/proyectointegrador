@@ -263,3 +263,7 @@ fetch (url)
         console.log(localStorage);
         })
     }
+    if  (type == "genre"){
+        document.querySelector(".agregarAlbum").style.display = 'none';
+        document.querySelector(".agregarTrack").style.display = 'none';
+    }        
