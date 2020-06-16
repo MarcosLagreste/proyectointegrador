@@ -26,7 +26,10 @@ function buscarYMostrarTrack(idTrack){
             return response.json();
         })
         .then(function (track) {
-            playlistWrapper.innerHTML += '<li>' + '<a href="detail2.html?type=track&id=' + track.id + '">' + track.title + '</a></li>' 
+            console.log(track);
+            
+            playlistWrapper.innerHTML +=  '<div>' + '<li>' + '<a href="detail2.html?type=track&id=' + track.id + '">' + track.title + '</a></li>' +'</div>' +  '<div>' + '<iframe src="' + track.preview + '" frameborder="0"></iframe>' + '</div>' 
+
         })
         .catch(function(errors){
             console.log(errors);

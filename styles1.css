@@ -152,6 +152,16 @@ a {
 }
 .cuadroPlaylistInterno{
     display: grid;
+    grid-template-rows: 1fr 1fr;
+    padding: 30px;
+    gap: 20px;
+}
+.playlistWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.playlistWrapperAlbum{
+    display: grid;
     grid-template-columns: 1fr 1fr;
 }
 .ligenres{
