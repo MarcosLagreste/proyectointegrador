@@ -203,30 +203,63 @@ fetch (url)
         console.log(error);
         
     })
-        //Playlist
+        //Playlist tracks
+    if  (type == "track"){
+        document.querySelector(".agregarAlbum").style.display = 'none';
         let idTrack = datos.get('id');
-        let recuperoStorage = localStorage.getItem('playlist');
-        if(recuperoStorage == null){
-        playlist = [];
+        let recuperoStorageTrack = localStorage.getItem('playlistTracks');
+        if(recuperoStorageTrack == null){
+        playlistTrack = [];
         } else {
-        playlist = JSON.parse(recuperoStorage);
+        playlistTrack = JSON.parse(recuperoStorageTrack);
         }
-        if(playlist.includes(idTrack)){
-        document.querySelector('.agregar').innerHTML = "Quitar de la playlist";
+        if(playlistTrack.includes(idTrack)){
+        document.querySelector('.agregarTrack').innerHTML = "Quitar track de la playlist";
         }
-        let agregar = document.querySelector('.agregar');
-        agregar.addEventListener('click', function(e){
+        let agregarTrack = document.querySelector('.agregarTrack');
+        agregarTrack.addEventListener('click', function(e){
         e.preventDefault();
-        if (playlist.includes(idTrack)){
-            let indiceEnElArray = playlist.indexOf(idTrack);
-            playlist.splice(indiceEnElArray, 1);
-            document.querySelector('.agregar').innerHTML = "Agregar a playlist";
-        console.log(playlist);
+        if (playlistTrack.includes(idTrack)){
+            let indiceEnElArray = playlistTrack.indexOf(idTrack);
+            playlistTrack.splice(indiceEnElArray, 1);
+            document.querySelector('.agregarTrack').innerHTML = "Agregar track a playlist";
+        console.log(playlistTrack);
         } else {
-            playlist.push(idTrack);
-        document.querySelector('.agregar').innerHTML = "Quitar de la playlist"
+            playlistTrack.push(idTrack);
+        document.querySelector('.agregarTrack').innerHTML = "Quitar track de la playlist"
         }
-        let playlistParaStorage = JSON.stringify(playlist);
-        localStorage.setItem('playlist', playlistParaStorage);
+        let playlistTrackParaStorage = JSON.stringify(playlistTrack);
+        localStorage.setItem('playlistTrack', playlistTrackParaStorage);
         console.log(localStorage);
         })
+    }
+    if (type == "album"){
+        document.querySelector(".agregarTrack").style.display = 'none';
+        //Playlist albums
+        let idAlbum = datos.get('id');
+        let recuperoStorageAlbum = localStorage.getItem('playlistAlbum');
+        if(recuperoStorageAlbum == null){
+        playlistAlbum = [];
+        } else {
+        playlistAlbum = JSON.parse(recuperoStorageAlbum);
+        }
+        if(playlistAlbum.includes(idAlbum)){
+        document.querySelector('.agregarAlbum').innerHTML = "Quitar album de la playlist";
+        }
+        let agregarAlbum = document.querySelector('.agregarAlbum');
+        agregarAlbum.addEventListener('click', function(e){
+        e.preventDefault();
+        if (playlistAlbum.includes(idAlbum)){
+            let indiceEnArray = playlistAlbum.indexOf(idAlbum);
+            playlistAlbum.splice(indiceEnArray, 1);
+            document.querySelector('.agregarAlbum').innerHTML = "Agregar album a playlist";
+        console.log(playlistAlbum);
+        } else {
+            playlistAlbum.push(idAlbum);
+        document.querySelector('.agregarAlbum').innerHTML = "Quitar album de la playlist"
+        }
+        let playlistAlbumParaStorage = JSON.stringify(playlistAlbum);
+        localStorage.setItem('playlistAlbum', playlistAlbumParaStorage);
+        console.log(localStorage);
+        })
+    }

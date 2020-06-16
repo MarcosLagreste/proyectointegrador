@@ -1,19 +1,19 @@
 let proxy = "https://cors-anywhere.herokuapp.com/";
 let url = proxy + "https://api.deezer.com/playlist/";
 
-let recuperoStorage = localStorage.getItem('playlist');
-let playlist = JSON.parse(recuperoStorage);
+let recuperoStorageTrack = localStorage.getItem('playlistTracks');
+let playlistTrack = JSON.parse(recuperoStorageTrack);
 
 let playlistWrapper = document.querySelector('.playlistWrapper');
-console.log(recuperoStorage);
-if(recuperoStorage == null || recuperoStorage == "[]"){
-    playlist = [];
+console.log(recuperoStorageTrack);
+if(recuperoStorageTrack == null || recuperoStorageTrack == "[]"){
+    playlistTrack = [];
     playlistWrapper.innerHTML += '<li> No hay canciones en tu playlist </li>'
     console.log(playlistWrapper);
     
 } else {
 
-    playlist.forEach(function(idTrack){
+    playlistTrack.forEach(function(idTrack){
         buscarYMostrarTrack(idTrack);
     });
 }
@@ -33,8 +33,40 @@ function buscarYMostrarTrack(idTrack){
             
         })
 };
+let recuperoStorageAlbum = localStorage.getItem('playlistAlbum');
+let playlistAlbum = JSON.parse(recuperoStorageAlbum);
+
+let playlistWrapperAlbum = document.querySelector('.playlistWrapperAlbum');
+console.log(recuperoStorageAlbum);
+if(recuperoStorageAlbum == null || recuperoStorageAlbum == "[]"){
+    playlistAlbum = [];
+    playlistWrapperAlbum.innerHTML += '<li> No hay albums en tu playlist </li>'
+    console.log(playlistWrapperAlbum);
+    
+} else {
+
+    playlistAlbum.forEach(function(idAlbum){
+        buscarYMostrarAlbum(idAlbum);
+    });
+}
+function buscarYMostrarAlbum(idAlbum){
+    let proxy = 'https://cors-anywhere.herokuapp.com/';
+    let url = proxy + 'https://api.deezer.com/track/' + idAlbum;
+
+    fetch(url)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (album) {
+            playlistWrapperAlbum.innerHTML += '<li>' + '<a href="track.html?id=' + album.id + '">' + album.title + '</a></li>' 
+        })
+        .catch(function(errors){
+            console.log(errors);
+            
+        })
+};
     //PlAYLIST
-    let queryString = location.search;
+ /*/   let queryString = location.search;
     let datos = new URLSearchParams (queryString);
     let idTrack = datos.get('id');
     let url1 = proxy + "https://api.deezer.com/track/" + idTrack
@@ -59,7 +91,7 @@ fetch(url1)
         //el player.
         let player = document.querySelector('iframe');
         player.src = 'https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=tracks&id=' + idTrack + '&app_id=1'
-    })
+    }) /*/
         
     /*/    let recuperoStorage = localStorage.getItem('playlist');
     if(recuperoStorage == null){
