@@ -26,7 +26,7 @@ fetch (url)
             albumTrack.innerHTML = "Top 5 canciones:"   
         // numero de albums
         let infoArtistaDetail = document.querySelector(".infoArtistaDetail")
-        infoArtistaDetail.innerHTML = "Numero de albums: "+ datos.nb_album
+        infoArtistaDetail.innerHTML = "Numero de fans: "+ datos.nb_fan
          // album detail
          let albumdetail = document.querySelector(".album-detail")
          albumdetail.innerHTML = "Album de la cancion mas escuchada:"  
@@ -44,7 +44,7 @@ fetch (url)
                 //segunda imagen
                 let resulttracklist = datostracklist.data
                 let imagenartista2 = document.querySelector (".imagenartista2")
-                imagenartista2.innerHTML =  "<img src='" + resulttracklist[0].album.cover_xl + "'>"
+                imagenartista2.innerHTML =  "<a href='detail2.html?type=album&id=" + resulttracklist[0].album.id + "'>"+ "<img src='" + resulttracklist[0].album.cover_xl + "'>"
                 // info del album 
                 let infodelalbum = document.querySelector(".infodelalbum") 
                 infodelalbum.innerHTML = resulttracklist[0].album.title
@@ -76,7 +76,7 @@ fetch (url)
             .then (function(datosalbum){
             //nombre
             let nameDetail = document.querySelector (".nameDetail") 
-            nameDetail.innerHTML = "Artista:    " + datosalbum.artist.name
+            nameDetail.innerHTML =  "<a href='detail2.html?type=artist&id=" + datosalbum.artist.id + "'>" + "Artista:    " + datosalbum.artist.name
             //imagen cancion
             let imagenartista = document.querySelector (".imagenartista")
             imagenartista.innerHTML =  "<a href='detail2.html?type=artist&id=" + datosalbum.artist.id + "'>"+"<img src='" +   datosalbum.artist.picture_xl + "'>"
@@ -88,7 +88,7 @@ fetch (url)
             imagenalbum.innerHTML = "<img src='" +   datosalbum.cover_xl + "'>"
             //info del album
             let infodelalbum = document.querySelector (".infodelalbum")
-            infodelalbum.innerHTML = datosalbum.title
+            infodelalbum.innerHTML = datosalbum.title + "<p>" + "Fecha de salida: " + datosalbum.release_date + "</p>" 
             //track escuchado
             let albumTrack = document.querySelector (".albumTrack")
             albumTrack.innerHTML = "Canciones del album:"
