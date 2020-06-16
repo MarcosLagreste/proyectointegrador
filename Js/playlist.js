@@ -1,7 +1,7 @@
 let proxy = "https://cors-anywhere.herokuapp.com/";
 let url = proxy + "https://api.deezer.com/playlist/";
 
-let recuperoStorageTrack = localStorage.getItem('playlistTracks');
+let recuperoStorageTrack = localStorage.getItem('playlistTrack');
 let playlistTrack = JSON.parse(recuperoStorageTrack);
 
 let playlistWrapper = document.querySelector('.playlistWrapper');
@@ -51,7 +51,7 @@ if(recuperoStorageAlbum == null || recuperoStorageAlbum == "[]"){
 }
 function buscarYMostrarAlbum(idAlbum){
     let proxy = 'https://cors-anywhere.herokuapp.com/';
-    let url = proxy + 'https://api.deezer.com/track/' + idAlbum;
+    let url = proxy + 'https://api.deezer.com/album/' + idAlbum;
 
     fetch(url)
         .then(function (response) {
