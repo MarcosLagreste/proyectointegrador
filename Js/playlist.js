@@ -62,7 +62,7 @@ function buscarYMostrarAlbum(idAlbum){
             return response.json();
         })
         .then(function (album) {
-            playlistWrapperAlbum.innerHTML += '<div>' + '<li>' + '<a href="detail2.html?type=album&id=' + album.id + '">' + album.title + '</a></li>' + '</div>' + '<div>' + '<iframe class = "reproductorAlbum" src="' + album.preview + '" frameborder="0"></iframe>' + '</div>'
+            playlistWrapperAlbum.innerHTML += '<div>' + '<li>' + '<a href="detail2.html?type=album&id=' + album.id + '">' + album.title + '</a></li>' + '</div>' + '<div>' + '<iframe class = "reproductoralbum" src="' + album.preview + '" frameborder="0"></iframe>' + '</div>'
             let player = document.querySelector('iframe');
             player.src= 'https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=007FEB&layout=dark&size=medium&type=album&id=' + idAlbum + '&app_id=1';
         })
