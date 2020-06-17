@@ -28,7 +28,7 @@ function buscarYMostrarTrack(idTrack){
         .then(function (track) {
             console.log(track);
             
-            playlistWrapper.innerHTML +=  '<div>' + '<li>' + '<a href="detail2.html?type=track&id=' + track.id + '">' + track.title + '</a></li>' +'</div>' +  '<div>' + '<iframe class = "reproductorplaylist" src="' + track.preview + '" frameborder="0"></iframe>' + '</div>' 
+            playlistWrapper.innerHTML +=  '<div>' + '<li>' + '<a href="detail2.html?type=track&id=' + track.id + '">' + track.title + '</a></li>' +'</div>' +  '<div>' + '<iframe class = "reproductorplaylist" src="' + '" frameborder="0"></iframe>' + '</div>' 
             let player = document.querySelector('.reproductorplaylist');
             player.src = 'https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=500&height=200&color=007FEB&layout=dark&size=medium&type=tracks&id=' + idTrack + '&app_id=1'
         })
@@ -62,7 +62,7 @@ function buscarYMostrarAlbum(idAlbum){
             return response.json();
         })
         .then(function (album) {
-            playlistWrapperAlbum.innerHTML += '<li>' + '<a href="detail2.html?type=album&id=' + album.id + '">' + album.title + '</a></li>' 
+            playlistWrapperAlbum.innerHTML += '<div>' + '<li>' + '<a href="detail2.html?type=album&id=' + album.id + '">' + album.title + '</a></li>' +'</div>' + '<div>' + '<iframe class = "reproductorplaylist" src="' + '" frameborder="0"></iframe>' + '</div>' 
         })
         .catch(function(errors){
             console.log(errors);
