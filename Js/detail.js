@@ -207,7 +207,7 @@ fetch (url)
     if  (type == "track"){
         document.querySelector(".agregarAlbum").style.display = 'none';
         let idTrack = datos.get('id');
-        let recuperoStorageTrack = localStorage.getItem('playlistTracks');
+        let recuperoStorageTrack = localStorage.getItem('playlistTrack');
         if(recuperoStorageTrack == null){
         playlistTrack = [];
         } else {
@@ -217,8 +217,8 @@ fetch (url)
         document.querySelector('.agregarTrack').innerHTML = "Quitar track de la playlist";
         }
         let agregarTrack = document.querySelector('.agregarTrack');
-        agregarTrack.addEventListener('click', function(e){
-        e.preventDefault();
+        agregarTrack.addEventListener('click', function(a){
+        a.preventDefault();
         if (playlistTrack.includes(idTrack)){
             let indiceEnElArray = playlistTrack.indexOf(idTrack);
             playlistTrack.splice(indiceEnElArray, 1);
