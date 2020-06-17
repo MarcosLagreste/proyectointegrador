@@ -159,10 +159,12 @@ a {
 .playlistWrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 .playlistWrapperAlbum{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 .ligenres{
     -webkit-appearance: menulist;
@@ -182,7 +184,7 @@ a {
 }
 .medioplaylist{
     display: grid;
-    grid-row: 1fr 1fr;
+    
     gap: 45px;
     padding: 40px;
 }
@@ -238,7 +240,16 @@ img {
     padding: 10px;  
 
 }
-
+.agregarTrack{
+    background-color: rgba(0, 0, 0, 0.466);
+    border-radius: 5px;
+    padding: 5px;
+}
+.agregarAlbum{
+    background-color: rgba(0, 0, 0, 0.466);
+    border-radius: 5px;
+    padding: 5px;
+}
 h1 {
     color: white;
     text-align: center;
@@ -253,6 +264,7 @@ h1 {
     row-gap: 40px;
     width: 100%;
     border-radius: 10px;
+    height: 100%    ;
     
 }
 
@@ -396,6 +408,7 @@ li{
         display: grid;
         grid: none;
         text-align: center;
+        
     }
     .bot {
         display: grid;
