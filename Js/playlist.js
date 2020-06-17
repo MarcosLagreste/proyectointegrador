@@ -31,7 +31,7 @@ function buscarYMostrarTrack(idTrack){
             
         
             playlistWrapper.innerHTML +=  '<div>' + '<li>' + '<a href="detail2.html?type=track&id=' + track.id + '">' + track.title + '</a></li>' + '</div>' +  '<div>' + '<iframe class = "reproductorplaylist" src="' + 'https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=500&height=200&color=007FEB&layout=dark&size=medium&type=tracks&id=' + idTrack + '&app_id=1' + '" frameborder="0"></iframe>' + '</div>' 
-            console.log(player)
+
             
         })
         .catch(function(errors){
