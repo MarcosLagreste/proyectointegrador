@@ -152,7 +152,7 @@ a {
 }
 .cuadroPlaylistInterno{
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 20% 80%;
     padding: 30px;
     gap: 20px;
 }

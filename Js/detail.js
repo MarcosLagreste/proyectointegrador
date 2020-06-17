@@ -48,8 +48,8 @@ fetch (url)
                 // info del album 
                 let infodelalbum = document.querySelector(".infodelalbum") 
                 infodelalbum.innerHTML = resulttracklist[0].album.title
+                // 5 canciones 
                 let cuadrocanciones = document.querySelector(".cuadrocanciones")
-
                 resulttracklist.forEach(function(resultado){
                     cuadrocanciones.innerHTML += "<a href='detail2.html?type=" + resultado.type + "&id="  + resultado.id + "'>" + resultado.title + "</li>"
                 })
