@@ -92,7 +92,13 @@ fetch (url)
             //track escuchado
             let albumTrack = document.querySelector (".albumTrack")
             albumTrack.innerHTML = "Canciones del album:"
-
+            
+            //genero al que pertenece
+            let generos = datosalbum.genres.data
+            let generoslink = document.querySelector(".generoslink")
+            generos.forEach(function(resultado){
+                generoslink.innerHTML +=   "<div> <li >" + "Género: " + "<a class='generoslinkstyle' href='detail2.html?type=" + resultado.type + "&id="  + resultado.id + "'>" + resultado.name + "</li></div>"
+            })
             //lista de tracks
             console.log(datosalbum);
             

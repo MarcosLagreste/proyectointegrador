@@ -152,7 +152,7 @@ a {
 }
 .cuadroPlaylistInterno{
     display: grid;
-    grid-template-rows: 20% 80%;
+    grid-template-rows: 10% 90%;
     padding: 30px;
     gap: 20px;
 }
@@ -168,6 +168,15 @@ a {
 }
 .ligenres{
     -webkit-appearance: menulist;
+}
+.generoslinkstyle{
+    background-color: rgba(0, 0, 0, 0.466);
+    border-radius: 5px;
+}
+.estitlogenres {
+    background-color: rgba(0, 0, 0, 0.466);
+    border-radius: 20px;
+    padding: 3%;
 }
 .estilocharts{
     display: grid;
