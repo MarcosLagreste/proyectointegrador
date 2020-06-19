@@ -450,6 +450,10 @@ li{
         position: absolute;
         bottom: -530%;
     }
+    .resultadoschart{
+        justify-content: center;
+        grid-template-columns: 1fr;
+    }
 }
 
 @media only screen and (max-width: 460px) {
@@ -495,7 +499,7 @@ li{
         position: absolute;
         bottom: -470%;
     }
-    
+
     .medioplaylist{
         place-items: center;
         padding: 3%;
