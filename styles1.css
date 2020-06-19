@@ -358,10 +358,7 @@ li{
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5%;
 }
-.footergenero{
-    position: absolute;
-    bottom: -1000%;
-}
+
 @media only screen and (max-width: 1200px) {
 
     .charts {
@@ -370,12 +367,12 @@ li{
 }
 .footergenero{
     position: absolute;
-    bottom: -900%;
+    bottom: -250%;
 }
 @media only screen and (max-width: 1024px) {
 .footergenero{
     position: absolute;
-    bottom: -820%;
+    bottom: -260%;
 }
 }
 @media only screen and (max-width: 768px) {
@@ -415,8 +412,8 @@ li{
             width: 35%;
     }
     .footergenero{
-         position: absolute;
-        bottom: -1450%;
+        position: absolute;
+        bottom: -700%;
     }
     .playlistWrapper {
         display: grid;
@@ -433,6 +430,7 @@ li{
     .titulos{
         font-size: large;
     }
+        
 }
 
 @media only screen and (max-width: 600px) {
@@ -450,7 +448,7 @@ li{
     }
     .footergenero{
         position: absolute;
-        bottom: -1125%;
+        bottom: -530%;
     }
 }
 
@@ -495,8 +493,9 @@ li{
     }
     .footergenero{
         position: absolute;
-        bottom: -950%;
+        bottom: -470%;
     }
+    
     .medioplaylist{
         place-items: center;
         padding: 3%;
@@ -581,7 +580,7 @@ li{
     }
     .footergenero{
         position: absolute;
-        bottom: -3150%;
+        bottom: -1530%;
     }
     .medioplaylist{
         padding: 3%;
