@@ -454,6 +454,9 @@ li{
         justify-content: center;
         grid-template-columns: 1fr;
     }
+    .artist-detail{
+        text-align: -webkit-center;
+    }
 }
 
 @media only screen and (max-width: 460px) {
