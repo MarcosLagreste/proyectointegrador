@@ -14,11 +14,6 @@ fetch(url)
         resultados.forEach (function(genre){
             generos.innerHTML += "<div class='estitlogenres'><a href=detail2.html?type=genre&id=" + genre.id + "><li class='ligenres'>"  + genre.name + "</li>" + "<div class='estiloimagengenres'>" + '<img src="' + genre.picture + '">'+ "</div></a></div>" 
         });
-        
-        
-
-
-
 
 
     })

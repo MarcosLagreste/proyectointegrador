@@ -395,6 +395,14 @@ li{
         grid: none;
 
     }
+    .resultadogeneros {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+      
+    .imgredes {
+            width: 35%;
+        }
 
 }
 
@@ -404,6 +412,7 @@ li{
     }
     .titulos{
         font-size: medium;
+        padding: 15px;
     }
     .imagenartista{
         border-radius: 30%;
@@ -444,6 +453,12 @@ li{
     .griddetail{
         padding: 0;
         gap: 0;
+    }
+    .logodeezer {
+        width: 60%;
+    }
+    .imgredes {
+        width: 50%;
     }
 }
 
@@ -502,5 +517,16 @@ li{
     }
     .scotts{
         padding: 0;
+    }
+    .resultadogeneros {
+    grid-template-columns: 1fr;
+    padding: 10px;
+    } 
+
+    .logodeezer {
+        width: 90%;
+    }
+    .imgredes {
+        width: 100%;
     }
 }
