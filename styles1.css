@@ -358,7 +358,10 @@ li{
     grid-template-columns: 1fr 1fr 1fr;
     gap: 5%;
 }
-
+.footergenero{
+    position: absolute;
+    bottom: 450%;
+}
 @media only screen and (max-width: 1200px) {
 
     .charts {
@@ -367,7 +370,7 @@ li{
 }
 .footergenero{
     position: absolute;
-    bottom: -250%;
+    bottom: -450%;
 }
 @media only screen and (max-width: 1024px) {
 .footergenero{
