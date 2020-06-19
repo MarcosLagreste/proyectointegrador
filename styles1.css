@@ -414,10 +414,25 @@ li{
     .imgredes {
             width: 35%;
     }
-        .footergenero{
-            position: absolute;
-            bottom: -1450%;
-        }
+    .footergenero{
+         position: absolute;
+        bottom: -1450%;
+    }
+    .playlistWrapper {
+        display: grid;
+        grid-template-columns: none;
+        align-items: center;
+        text-align: center;
+    }
+    .playlistWrapperAlbum {
+        display: grid;
+        grid-template-columns: none;
+        align-items: center;
+        text-align: center;
+    }
+    .titulos{
+        font-size: large;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -482,6 +497,19 @@ li{
         position: absolute;
         bottom: -950%;
     }
+    .medioplaylist{
+        place-items: center;
+        padding: 3%;
+        text-align: -webkit-center;
+
+    }
+    .reproductorplaylist {
+        width: 93px;
+    }
+    .reproductoralbum{
+        width: 93px;
+    }
+    
 }
 
 @media only screen and (max-width: 320px) {
@@ -554,5 +582,16 @@ li{
     .footergenero{
         position: absolute;
         bottom: -3150%;
+    }
+    .medioplaylist{
+        padding: 3%;
+    }
+    .chartsplaylist{
+        width: 94%;
+    }
+    .cuadroPlaylistInterno {
+        padding: 3%;
+        gap: 1px;
+        padding-bottom: 20%;
     }
 }
